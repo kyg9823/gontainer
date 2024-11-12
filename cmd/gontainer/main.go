@@ -7,6 +7,14 @@ import (
 	"github.com/kyg9823/gontainer/api"
 )
 
+// @title          Gontainer
+// @version        1.1
+// @description    Container manager for Go
+
+// @contact.name Youngkook Kim
+// @contact.email theboss@lgcns.com
+
+// @license.name MIT License
 func main() {
 	router := api.NewAPIRouter()
 

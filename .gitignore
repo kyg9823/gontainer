@@ -26,3 +26,9 @@ go.work.sum
 
 # Debug
 cmd/gontainer/__debug_*
+
+# Binary
+build/**
+
+# Swagger
+api/docs/*

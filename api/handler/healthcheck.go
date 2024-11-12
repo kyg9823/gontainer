@@ -9,6 +9,12 @@ type Health struct {
 	Status bool `json:"status"`
 }
 
+// @Summary Get healthcheck
+// @Description Get healthcheck
+// @Accept json
+// @Produce json
+// @Success 200 {object} Health
+// @Router /gontainer/api/v1/healthcheck [get]
 func HealthcheckHandler(w http.ResponseWriter, r *http.Request) {
 	result := &Health{
 		Status: true,
