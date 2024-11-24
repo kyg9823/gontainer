@@ -8,11 +8,11 @@ import (
 )
 
 // @title          Gontainer
-// @version        1.1
+// @version        0.1
 // @description    Container manager for Go
 
 // @contact.name Youngkook Kim
-// @contact.email theboss@lgcns.com
+// @contact.email kyg9823@gmail.com
 
 // @license.name MIT License
 func main() {

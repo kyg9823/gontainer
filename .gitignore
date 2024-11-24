@@ -32,3 +32,6 @@ build/**
 
 # Swagger
 api/docs/*
+
+# React Output
+web/static
