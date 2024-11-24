@@ -1,33 +1,53 @@
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar top"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 50px auto;
+  grid-template-rows: 50px 50px auto 50px;
+  height: 99vh;
   width: 100%;
 }
 
-.header {
-  background-color: rgb(24, 24, 24);
-  padding: 10px;
-  height: 35px;
-  top: 0px;
+header {
+  grid-area: header;
+  /* background-color: rgb(24, 24, 24); */
   border-bottom: 1px solid rgb(43, 43, 43)
 }
 
-.top {
-  background-color: rgb(24, 24, 24);
+nav.top {
+  grid-area: top;
+  background-color: #f5f4f0;
+  border-top: 2px solid rgba(50, 50, 40, 0.5);
 }
 
-.main-content {
+ul.top-menu {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  vertical-align: middle;
+  letter-spacing: -0.05em;
+  padding: 13px;
 }
 
-.sidebar {
-  width: 100px;
-  background-color: #e0e0e0;
-  padding: 10px;
+ul.top-menu li {
+  display: list-item;
+  list-style-type: none;
+}
+
+aside.sidebar {
+  grid-area: sidebar;
+  background-color: yellow;
 }
 
 .content {
-  flex-grow: 1;
-  padding: 20px;
+  grid-area: content;
+  background-color: blue;
+}
+
+footer {
+  grid-area: footer;
+  background-color: green;
 }

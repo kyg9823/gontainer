@@ -11,8 +11,8 @@ import (
 	"golang.org/x/sys/unix"
 )
 
-func NewClient(address string, namespace string, opts ...containerd.Opt) (*containerd.Client, context.Context, context.CancelFunc, error) {
-	ctx := namespaces.WithNamespace(context.Background(), namespace)
+func NewClient(ctx context.Context, address string, namespace string, opts ...containerd.Opt) (*containerd.Client, context.Context, context.CancelFunc, error) {
+	ctx = namespaces.WithNamespace(ctx, namespace)
 
 	address = strings.TrimPrefix(address, "unix://")
 	const containerdAddress = "/var/run/containerd/containerd.sock"

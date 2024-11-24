@@ -8,7 +8,7 @@ type ConfigList struct {
 
 var Config *ConfigList
 
-func LoadConfig() {
+func init() {
 	Config = &ConfigList{
 		ContainerdAddress: getEnv("CONTAINERD_ADDRESS", "/run/containerd/containerd.sock"),
 	}

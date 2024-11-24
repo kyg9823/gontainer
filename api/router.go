@@ -21,6 +21,12 @@ func NewAPIRouter() *chi.Mux {
 
 	fs := http.FileServer(http.Dir("../../web/static"))
 	router.Handle("/gontainer/*", http.StripPrefix("/gontainer/", fs))
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/gontainer/", http.StatusFound)
+	})
+	router.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/gontainer/vite.svg", http.StatusFound)
+	})
 
 	router.Get("/gontainer/api/v1/containers", handler.ContainerListHandler)
 	router.Get("/gontainer/api/v1/images", handler.ImageListHandler)

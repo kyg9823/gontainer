@@ -8,4 +8,12 @@ export default defineConfig({
     outDir: '../static'
   },
   plugins: [react()],
+  server: {
+    proxy: {
+      '/gontainer/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      }
+    }
+  }
 })
