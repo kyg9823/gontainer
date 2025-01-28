@@ -118,8 +118,11 @@ UNIX Socket 혹은 HTTP/TCP 를 통해 Container 의 목록을 조회하고 관�
 7. Container 삭제
     1. DELETE /gontainer/api/v1/container/:containerId
     2. DELETE /gontainer/api/v1/node/:nodeId/container/:containerId
+    3. DELETE
+/gontainer/api/v1/node/:nodeId/container/dangling
 8. Container Commit
 9. Container Push
+    
 
 
 ### Node 관리
@@ -145,10 +148,11 @@ UNIX Socket 혹은 HTTP/TCP 를 통해 Container 의 목록을 조회하고 관�
 ## To-Do
 ---
 
-
 1. 1차 구현
     1. Container 조회: 목록 조회, 상세 조회
     2. Container 생성: 생성
     3. Container 시작/종료/삭제: 
 2. 2차 구현
-    1.
+
+
+3. Domain? Repo 관리 같은 건 어떤지
