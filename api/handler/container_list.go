@@ -15,7 +15,6 @@ type ContainerFilter struct {
 // @Description Get Containers
 // @Accept json
 // @Produce json
-// @Success 200 {object} []ContainerInfo
 // @Router /gontainer/api/v1/containers [get]
 func ContainerListHandler(w http.ResponseWriter, r *http.Request) {
 	result, err := service.GetContainerList()

@@ -12,7 +12,6 @@ import (
 // @Description Get Images
 // @Accept json
 // @Produce json
-// @Success 200 {object} []ImageInfo
 // @Router /gontainer/api/v1/images [get]
 func ImageListHandler(w http.ResponseWriter, r *http.Request) {
 	result, err := service.GetImageList()
