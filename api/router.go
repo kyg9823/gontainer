@@ -16,7 +16,7 @@ func NewAPIRouter() *chi.Mux {
 	router.Get("/gontainer/api/v1/healthcheck", handler.HealthcheckHandler)
 
 	router.Get("/gontainer/swagger/*", httpSwagger.Handler(
-		httpSwagger.URL("http://localhost:8080/gontainer/swagger/doc.json"), //The url pointing to API definition
+		httpSwagger.URL("/gontainer/swagger/doc.json"), //The url pointing to API definition
 	))
 
 	fs := http.FileServer(http.Dir("../../web/static"))
